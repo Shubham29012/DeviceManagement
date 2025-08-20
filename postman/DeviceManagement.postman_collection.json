@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "5a91f22a-a8-4485-b5f9-a226e209e3",
+		"name": "DeviceManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47279454",
+		"_collection_link": "https://shubhamss11020-4623416.postman.co/workspace/Smart-Device-Management~118f04a0-62f9-4206-b42b-1b30826c1fb4/collection/47279454-5a91f22a-adc8-4485-b5f9-a22526e209e3?action=share&source=collection_link&creator=47279454"
+	},
+	"item": [
+		{
+			"name": "RegisternewDevice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsI5cCI6IkpXVCJ9.eyJpZCI6IjY4YTMzODYyN2IyYTYzY2NiNzFiNWZhOCIsImlhdCI6MTc1NTUyNzMzNCwiZXhwIjoxNzU2MTMyMTM0fQ.9oFiBRDGQgQvGdjMHjdxFLx_oT2_hDvAj4WJf1YUkFs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Temperature Sensor\",\r\n  \"type\": \"sensor\",\r\n  \"status\": \"active\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/devices/adddevice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"devices",
+						"adddevice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDevices",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsI5cCI6IkpXVCJ9.eyJpZCI6IjY4YTMzODYYzY2NiNzFiNWZhOCIsImlhdCI6MTc1NTUyNzMzNCwiZXhwIjoxNzU2MTMyMTM0fQ.9oFiBRDGQgQvGdjMHjdxFLx_oT2_hDvAj4WJf1YUkFs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/devices?type=sensor&status=active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"devices"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "sensor"
+						},
+						{
+							"key": "status",
+							"value": "active"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateDevice",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsICI6pXVCJ9.eyJpZCI6IjY4YTMzODYyN2IyYTYzY2NiNzFiNWZhOCIsImlhdCI6MTc1NTUyNzMzNCwiZXhwIjoxNzU2MTMyMTM0fQ.9oFiBRDGQgQvGdjMHjdxFLx_oT2_hDvAj4WJf1YUkFs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Updated Temperature Sensor\",\r\n  \"status\": \"inactive\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/devices/68a33cfe83db1be9fc673ef4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"devices",
+						"68a33cfe83dbe9fc673ef4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteDevice",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzNiIsInR5cCI6IkpXVCJ9.eyJpZ6IjY4YTMzODYyN2IyYTYzY2NiNzFiNWZhOCIsImlhdCI6MTc1NTUyNzMzNCwiZXhwIjoxNzU2MTMyMTM0fQ.9oFiBRDGQgQvGdjMHjdxFLx_oT2_hDvAj4WJf1YUkFs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/devices/68a33cfe83db1be9fc673ef4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"devices",
+						"68a33cfe83dbe9fc673ef4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeviceLastactive",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsI5cCI6IkpXVCJ9.eyJpZCI6IjY4YTMzODYyNyYTYzY2NiNzFiNWZhOCIsImlhdCI6MTc1NTUyNzMzNCwiZXhwIjoxNzU2MTMyMTM0fQ.9oFiBRDGQgQvGdjMHjdxFLx_oT2_hDvAj4WJf1YUkFs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"status\": \"active\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/devices/68a33ed783db1be9fc673f02/heartbeat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"devices",
+						"68a33ed783db1be9fc673f02",
+						"heartbeat"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

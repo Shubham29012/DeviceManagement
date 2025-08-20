@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "373657ce-37cd-4c51-38f-7e140e4c62",
+		"name": "Data & Analytics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47279454",
+		"_collection_link": "https://shubhamss11020-4623416.postman.co/workspace/Smart-Device-Management~118f04a0-62f9-4206-b42b-1b30826c1fb4/collection/47279454-373657ce-37cd-4c51-838f-7e5a140e4c62?action=share&source=collection_link&creator=47279454"
+	},
+	"item": [
+		{
+			"name": "Create log entry.",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIs5cCI6IkpXVCJ9.eyJpZCI6IjY4YTMzODYyN2IyYTYzY2NiNzFiNWZhOCIsImlhdCI6MTc1NTUyNzMzNCwiZXhwIjoxNzU2MTMyMTM0fQ.9oFiBRDGQgQvGdjMHjdxFLx_oT2_hDvAj4WJf1YUkFs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"event\": \"units_consumed\",\r\n  \"value\": 2.5\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/devices/68a33ed783db1be9fc673f02/logs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"devices",
+						"68a33ed783db1be9fc673f02",
+						"logs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchlogs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTMzODYyN2IyYTYzY2NiNzFiNWZhOCIsImlhdCI6MTc1NTUyNzMzNCwiZXhwIjoxNzU2MTMyMTM0fQ.9oFiBRDGQgQvGdjMHjdxFLx_oT2_hDvAj4WJf1YUkFs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/devices/68a33ed783db1be9fc673f02/logs?limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"devices",
+						"68a33ed783db1be973f02",
+						"logs"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AggreateUsage",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1sInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTMzODYyN2IyYTYzY2NiNzFiNWZhOCIsImlhdCI6MTc1NTUyNzMzNCwiZXhwIjoxNzU2MTMyMTM0fQ.9oFiBRDGQgQvGdjMHjdxFLx_oT2_hDvAj4WJf1YUkFs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/devices/68a33ed783db1be9fc673f02/usage?range=24h",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"devices",
+						"68a33ed783db19fc673f02",
+						"usage"
+					],
+					"query": [
+						{
+							"key": "range",
+							"value": "24h"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

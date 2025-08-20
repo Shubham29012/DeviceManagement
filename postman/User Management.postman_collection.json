@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "adaa4eea-2348-4fcd-8c2f-54db4433c6a1",
+		"name": "User Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47279454",
+		"_collection_link": "https://shubhamss11020-4623416.postman.co/workspace/Smart-Device-Management~118f04a0-62f9-4206-b42b-1b30826c1fb4/collection/47279454-adaa4eea-2348-4fcd-8c2f-54db4433c6a1?action=share&source=collection_link&creator=47279454"
+	},
+	"item": [
+		{
+			"name": "Usersignup",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Userlogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"john@example.com\",\r\n  \"password\": \"SecurePass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
